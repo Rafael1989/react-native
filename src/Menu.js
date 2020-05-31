@@ -8,6 +8,7 @@ import Inverter, {MegaSena} from './componentes/Multi'
 import Contador from './componentes/Contador'
 import Plataforma from './componentes/Plataforma'
 import ValidarProps from './componentes/ValidarProps'
+import Evento from './componentes/Evento';
 
 const Drawer = createDrawerNavigator();
 
@@ -15,6 +16,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Screen name="Evento" component={() => <Evento />} />
         <Drawer.Screen name="ValidarProps" component={() => <ValidarProps ano={18} />} />
         <Drawer.Screen name="Plataforma" component={() => <Plataforma />} />
         <Drawer.Screen name="Contador" component={() => <Contador numeroInicial={50} />} />
