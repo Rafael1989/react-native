@@ -12,6 +12,7 @@ import Evento from './componentes/Evento';
 import Avo from './componentes/ComunicacaoDireta';
 import TextoSincronizado from './componentes/ComunicacaoIndireta';
 import ListaFlex from './componentes/ListaFlex';
+import Flex from './componentes/Flex';
 
 const Drawer = createDrawerNavigator();
 
@@ -19,6 +20,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Flex" component={Flex} />
         <Drawer.Screen name="Lista Flex" component={ListaFlex} />
         <Drawer.Screen name="Comunicação indireta" component={() => <TextoSincronizado />} />
         <Drawer.Screen name="Comunicação direta" component={() => <Avo nome="João" sobrenome="Silva"/>} />
